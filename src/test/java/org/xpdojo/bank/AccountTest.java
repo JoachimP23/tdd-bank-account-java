@@ -8,9 +8,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountTest {
 
     @Test
-	@Disabled
     public void depositAnAmountToIncreaseTheBalance() {
-        assertThat("your first test").isBlank();
+        Account account = new Account();
+        assertThat(account.getBalance() == 0);
+        account.deposit(1);
+        assertThat(account.getBalance() == 1);
     }
 
     @Test
