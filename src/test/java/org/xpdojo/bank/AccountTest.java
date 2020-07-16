@@ -37,4 +37,12 @@ public class AccountTest {
         account.withdraw(1);
         assertThat(account.getBalance() == 0);
     }
+
+    // Should be in Money test class
+    @Test
+    public void moneyTest() {
+        Money money = new Money();
+        assertThat(money.value == 0);
+
+    }
 }
