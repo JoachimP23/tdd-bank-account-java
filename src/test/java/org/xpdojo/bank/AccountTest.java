@@ -43,6 +43,5 @@ public class AccountTest {
     public void moneyTest() {
         Money money = new Money();
         assertThat(money.value == 0);
-
     }
 }
