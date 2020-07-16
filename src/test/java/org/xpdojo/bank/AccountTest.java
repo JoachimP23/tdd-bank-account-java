@@ -20,4 +20,21 @@ public class AccountTest {
         Account account = new Account();
         assertThat(account.getBalance() == 0);
     }
+
+    @Test
+    public void withdrawAnAmount() {
+        Account account = new Account();
+        account.withdraw(1);
+        assertThat(account.getBalance() == 1);
+    }
+
+    @Test
+    public void depositAndWithdrawAnAmount() {
+        Account account = new Account();
+        assertThat(account.getBalance() == 0);
+        account.deposit(1);
+        assertThat(account.getBalance() == 1);
+        account.withdraw(1);
+        assertThat(account.getBalance() == 0);
+    }
 }
